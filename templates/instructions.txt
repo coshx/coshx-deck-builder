@@ -1,0 +1,1 @@
+To view the demo file, rename index.pug to index2.pug and rename coshx-demo.pug to index.pug, then restart your server.

@@ -1,0 +1,52 @@
+//- Use the presentation layout so we can keep this clean
+extends layouts/presentation
+
+//- Override settings in templates/layouts/presentation.pug
+block append config
+  -
+    config.title = 'Coshx Slide Deck Template';
+    config.description = 'Build Your Deck';
+    config.author.name = '@coshx';
+    config.author.link = 'https://github.com/coshx';
+    config.theme = 'coshx';
+  -
+//- Add your slides here. See templates/includes/_mixins.pug for information
+//- on how `+slide` works.
+//- Use '+slide&attributes(slideBackground)' to create a new slide, everything else after 'block slides' is optional
+block slides
+    +slide&attributes(slideBackground)
+        h1= config.title
+        h5= config.description
+        p= config.author.name + ' ' + config.author.link
+        aside.notes Put presenter notes here
+    +slide&attributes(slideBackground).left
+        h1 Second slide goes here
+        h5 This is some h5 content
+        .smaller
+            p CSS: css/theme/coshx.CSS
+            p Layout and Config: templates/layouts/presentation.pug
+            p Coshx Demo: templates/coshx-demo.pug
+            p Reveal Demo: templates/reveal-demo.pug
+            p Print: css/print/coshx-paper.css
+            p PDF: css/print/coshx-pdf.CS
+    +slide&attributes(slideBackground).right
+        h1 Third slide goes here
+        h5 This is some h5 content
+        .smaller
+            p CSS: css/theme/coshx.CSS
+            p Layout and Config: templates/layouts/presentation.pug
+            p Coshx Demo: templates/coshx-demo.pug
+            p Reveal Demo: templates/reveal-demo.pug
+            p Print: css/print/coshx-paper.css
+            p PDF: css/print/coshx-pdf.CSS
+    +slide&attributes(slideBackground)
+        h1 Fourth slide goes here
+        h5 This is some h5 content
+        pre.smaller
+            code
+                | p CSS: css/theme/coshx.CSS
+                | p Layout and Config: templates/layouts/presentation.pug
+                | p Coshx Demo: templates/coshx-demo.pug
+                | p Reveal Demo: templates/reveal-demo.pug
+                | p Print: css/print/coshx-paper.css
+                | p PDF: css/print/coshx-pdf.CSS

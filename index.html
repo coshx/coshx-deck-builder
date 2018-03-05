@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Coshx Slide Deck Template</title>
+    <meta name="description" content="Build Your Deck">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link id="theme" rel="stylesheet" href="css/theme/coshx.css">
+    <link rel="stylesheet" href="lib/css/coshx-highlighting.css">
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/coshx-pdf.css' : 'css/print/coshx-paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+      
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-size="contain" data-background-image="/images/coshx-background.png">
+          <h1>Coshx Slide Deck Template</h1>
+          <h5>Build Your Deck</h5>
+          <p>@coshx https://github.com/coshx</p>
+          <aside class="notes">Put presenter notes here</aside>
+        </section>
+        <section class="left" data-background-size="contain" data-background-image="/images/coshx-background.png">
+          <h1>Second slide goes here</h1>
+          <h5>This is some h5 content</h5>
+          <div class="smaller">
+            <p>CSS: css/theme/coshx.CSS</p>
+            <p>Layout and Config: templates/layouts/presentation.pug</p>
+            <p>Coshx Demo: templates/coshx-demo.pug</p>
+            <p>Reveal Demo: templates/reveal-demo.pug</p>
+            <p>Print: css/print/coshx-paper.css</p>
+            <p>PDF: css/print/coshx-pdf.CS</p>
+          </div>
+        </section>
+        <section class="right" data-background-size="contain" data-background-image="/images/coshx-background.png">
+          <h1>Third slide goes here</h1>
+          <h5>This is some h5 content</h5>
+          <div class="smaller">
+            <p>CSS: css/theme/coshx.CSS</p>
+            <p>Layout and Config: templates/layouts/presentation.pug</p>
+            <p>Coshx Demo: templates/coshx-demo.pug</p>
+            <p>Reveal Demo: templates/reveal-demo.pug</p>
+            <p>Print: css/print/coshx-paper.css</p>
+            <p>PDF: css/print/coshx-pdf.CSS</p>
+          </div>
+        </section>
+        <section data-background-size="contain" data-background-image="/images/coshx-background.png">
+          <h1>Fourth slide goes here</h1>
+          <h5>This is some h5 content</h5>
+          <pre class="smaller"><code>p CSS: css/theme/coshx.CSS
+p Layout and Config: templates/layouts/presentation.pug
+p Coshx Demo: templates/coshx-demo.pug
+p Reveal Demo: templates/reveal-demo.pug
+p Print: css/print/coshx-paper.css
+p PDF: css/print/coshx-pdf.CSS</code></pre>
+        </section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+        width: '100%',
+      
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'socket.io/socket.io.js', async: true },
+          { src: 'plugin/notes-server/client.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } 
+           }
+        ]
+      });
+      
+    </script>
+  </body>
+</html>
